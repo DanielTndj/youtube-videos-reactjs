@@ -3,11 +3,11 @@ import "../styles/VideoItem.css";
 
 const VideoItem = ({ video, onVideoSelect }) => {
   return (
-    <div className="video-item item" onClick={()=>onVideoSelect(video)}>
+    <div className="video-item item" onClick={() => onVideoSelect(video)}>
       <img
         className="ui image"
         src={video.snippet.thumbnails.high.url}
-        alt=""
+        alt={video.snippet.title}
       />
       <div className="content">
         <div className="header">{video.snippet.title}</div>
